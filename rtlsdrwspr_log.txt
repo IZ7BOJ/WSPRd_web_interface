@@ -1,0 +1,23 @@
+Found 1 device(s):
+  0:  Generic, RTL2832U, SN: 77771111153705700
+
+Using device 0: Generic RTL2832U
+Found Rafael Micro R820T tuner
+[R82XX] PLL not locked!
+
+Starting rtlsdr-wsprd (2021-02-22, 08:48z) -- Version 0.2
+  Callsign     : IZ7BOJ
+  Locator      : JN81FG
+  Dial freq.   : 28124600 Hz
+  Real freq.   : 28124600 Hz
+  PPM factor   : 0
+  Gain         : 20 dB
+Wait for time sync (start in 116 sec)
+
+        Date       Time   SNR    DT     Freq.     Dr Call   Loc  Pwr
+No spot 2021-02-22 08:50z
+No spot 2021-02-22 08:51z
+Spot :  2021-02-22 08:54z -18.44 -0.93  28.126153  0 IZ7BOJ JN81 10
+Spot :  2021-02-22 08:56z -17.33 -0.85  28.126156  0 IZ7BOJ JN81 10
+Spot :  2021-02-22 08:58z -18.76 -0.91  28.126155  0 IZ7BOJ JN81 10
+
