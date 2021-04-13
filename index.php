@@ -247,7 +247,7 @@ session_start(); //start session
 		</table>
 
 	<br><hr><br>
-	<center><a href="" target="_blank">WSPR Simple Webstat version <?php echo $version; ?></a> by Alfredo IZ7BOJ</center>
+	<center><a href="https://github.com/IZ7BOJ/WSPRd_web_interface" target="_blank">WSPR Simple Webstat version <?php echo $version; ?></a> by Alfredo IZ7BOJ</center>
 	<br>
 </body>
 </html>
