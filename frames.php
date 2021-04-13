@@ -90,6 +90,6 @@ logexists();
 	} //close if issset GET['call'] 
 	?>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	<center><a href="" target="_blank">WSPRd Simple Webstat version <?php echo $version; ?></a> by Alfredo IZ7BOJ</center>
+	<center><a href="https://github.com/IZ7BOJ/WSPRd_web_interface" target="_blank">WSPRd Simple Webstat version <?php echo $version; ?></a> by Alfredo IZ7BOJ</center>
 	</body>
 </html>
