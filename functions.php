@@ -74,7 +74,7 @@ while ($lines < $linesinlog) { //read line by line
 function freq2band($freq)
 {
 
-$band==NULL;
+$band=NULL;
 
 switch ($freq) {
 	case (intval($freq)==144):
