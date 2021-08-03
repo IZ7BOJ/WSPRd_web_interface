@@ -64,9 +64,11 @@ logexists();
 		//parse line by line
 		while($counter < $linesinlog) {
 			$line = $logfile[$counter];
-			if(strpos($line, strtoupper($_GET['getcall']))) { //if spot is received from call  
-				$frame1 = substr($line, 8, -1); //cut first unuseful part
-				$parts = preg_split('/\s+/', $frame1); //split all fields
+			$frame1 = substr($line, 8, -1); //cut first unuseful part
+                        $parts = preg_split('/\s+/', $frame1); //split all fields
+                        if (count($parts)==9) { // if all fields are present
+                                if ($parts[6]==$_GET['getcall']) { //if spot is received from call
+
 	?>
 	<tr>
 		<td align="center"><?php echo $parts[6] ?></td>
@@ -80,7 +82,8 @@ logexists();
 		<td align="center"><?php echo $parts[8] ?></td>
 	</tr>
 	<?php
-			} // close if received from call
+				 } // close if received from call
+                       } // close if count($parts)==9
 		$counter++;
 		}//close while	
 	?>
