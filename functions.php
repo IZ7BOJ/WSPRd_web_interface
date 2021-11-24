@@ -161,7 +161,7 @@ $index1=17; //skip first part of general information
 while (($index1<$lines)AND(strpos($logfile[$lines - $index1],"Spot :"))) {
         $index1++;
         }
-$time1 = strtotime(substr($logfile[$lines - $index1], 8, 19));
+$time1 = $time2 = strtotime(substr($logfile[$lines - $index1], 8, 19));
 $index2=$index1+1;
 
 //go back to last-20  received packets and take time
@@ -173,9 +173,15 @@ while (($index2<$lines)AND($count<19)) {
 	$index2++;
 }
 
-$rxframespermin = $count / (($time1 - $time2) / 60);
+if ($time1!==$time2) {
+        $rxframespermin = $count / (($time1 - $time2) / 60);
+        }
+else {
+        $rxframespermin = 0;
+        }
+
 return $rxframespermin;
-}
+} //closes function
 
 /* 
  * PHP code snippet to calculate the distance and bearing between two
