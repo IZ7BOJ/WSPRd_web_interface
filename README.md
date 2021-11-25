@@ -1,7 +1,7 @@
 # WSPRd_web_interface
 A simple web interface for WSPRd daemon statistics
 
-# NOTE1: this code works only with the following wsprd daemon version modified by me! : https://github.com/IZ7BOJ/rtlsdr-wsprd/tree/patch-1 
+# NOTE1: this code works only with the following wsprd daemon version modified by me! : https://github.com/IZ7BOJ/rtlsdr-wsprd/
 The original wsprd version doesn't show date and time of received spots, that will be used for statistics. The daemon works whith rtlsdr dongles with direct sampling mode
 
 NOTE2: the wsprd daemon shall be launched with a command similar to this:
