@@ -16,11 +16,11 @@ logexists();
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="Description" content="WSPRd statistics" />
-<meta name="Keywords" content="" />
+<meta name="Keywords" content="wspr" />
 <meta name="Author" content="IZ7BOJ" />
 <title>WSPRd statistics - spots search</title>
 </head>
@@ -28,7 +28,7 @@ logexists();
 	<?php
 	if(file_exists($logourl)){
 	?>
-	<center><img src="<?php echo $logourl ?>" width="200px" height="100px" align="middle"></center><br>
+	<center><img src="<?php echo $logourl ?>" width="200" height="100" align="middle"></center><br>
 	<?php
 	}
 	?>
@@ -87,8 +87,8 @@ logexists();
 		$counter++;
 		}//close while	
 	?>
-			</tbody>
-		</table>
+	</tbody>
+	</table>
 	<?php
 	} //close if issset GET['call'] 
 	?>
