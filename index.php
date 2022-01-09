@@ -16,7 +16,7 @@ session_start(); //start session
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="Description" content="rtl-sdr wsprd statistics" />
@@ -36,7 +36,7 @@ session_start(); //start session
 <body>
 	<!-- LOGO PART -->
 	<?php if(file_exists($logourl)){ ?>
-	<center><img src="<?php echo $logourl ?>" width="200px" height="100px" align="middle"></center><br>
+	<center><img src="<?php echo $logourl ?>" width="200" height="100" align="middle"></center><br>
 	<?php } ?>
 
 	<center><font size="20"><b>WSPR statistics</b></font></center>
@@ -192,20 +192,22 @@ session_start(); //start session
 
 	<br><br><hr>
 	<!-- HISTORY LENGTH SELECTION -->
-		<br><br> <form action="index.php" method="GET">
-		Show stations since last:
-		<select name="time">
-			<option value="1"  <?php if(isset($_GET['time'])&&($_GET['time'] == 1))   echo 'selected="selected"'?>>1 hour</option>
-			<option value="2"  <?php if(isset($_GET['time'])&&($_GET['time'] == 2))   echo 'selected="selected"'?>>2 hours</option>
-			<option value="4"  <?php if(isset($_GET['time'])&&($_GET['time'] == 4))   echo 'selected="selected"'?>>4 hours</option>
-			<option value="6"  <?php if(isset($_GET['time'])&&($_GET['time'] == 6))   echo 'selected="selected"'?>>6 hours</option>
-			<option value="12" <?php if(isset($_GET['time'])&&($_GET['time'] == 12))  echo 'selected="selected"'?>>12 hours</option>
-			<option value="24" <?php if(isset($_GET['time'])&&($_GET['time'] == 24))  echo 'selected="selected"'?>>1 day</option>
-			<option value="48" <?php if(isset($_GET['time'])&&($_GET['time'] == 48))  echo 'selected="selected"'?>>2 days</option>
-			<option value="168"<?php if(isset($_GET['time'])&&($_GET['time'] == 168)) echo 'selected="selected"'?>>week</option>
-			<option value="720"<?php if(isset($_GET['time'])&&($_GET['time'] == 720)) echo 'selected="selected"'?>>30 days</option>
-			<option value="e"  <?php if(isset($_GET['time'])&&($_GET['time'] == 'e')) echo 'selected="selected"'?>>all</option>
-		</select>
+		<br><br>
+		<form action="index.php" method="GET">
+			Show stations since last:
+			<select name="time">
+				<option value="1"  <?php if(isset($_GET['time'])&&($_GET['time'] == 1))   echo 'selected="selected"'?>>1 hour</option>
+				<option value="2"  <?php if(isset($_GET['time'])&&($_GET['time'] == 2))   echo 'selected="selected"'?>>2 hours</option>
+				<option value="4"  <?php if(isset($_GET['time'])&&($_GET['time'] == 4))   echo 'selected="selected"'?>>4 hours</option>
+				<option value="6"  <?php if(isset($_GET['time'])&&($_GET['time'] == 6))   echo 'selected="selected"'?>>6 hours</option>
+				<option value="12" <?php if(isset($_GET['time'])&&($_GET['time'] == 12))  echo 'selected="selected"'?>>12 hours</option>
+				<option value="24" <?php if(isset($_GET['time'])&&($_GET['time'] == 24))  echo 'selected="selected"'?>>1 day</option>
+				<option value="48" <?php if(isset($_GET['time'])&&($_GET['time'] == 48))  echo 'selected="selected"'?>>2 days</option>
+				<option value="168"<?php if(isset($_GET['time'])&&($_GET['time'] == 168)) echo 'selected="selected"'?>>week</option>
+				<option value="720"<?php if(isset($_GET['time'])&&($_GET['time'] == 720)) echo 'selected="selected"'?>>30 days</option>
+				<option value="e"  <?php if(isset($_GET['time'])&&($_GET['time'] == 'e')) echo 'selected="selected"'?>>all</option>
+			</select>
+		</form>
 	<input type="submit" value="Refresh">
 	<?php
 	uasort($receivedstations, 'cmp'); //sort array by heard time
