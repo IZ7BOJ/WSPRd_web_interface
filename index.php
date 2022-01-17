@@ -207,8 +207,8 @@ session_start(); //start session
 				<option value="720"<?php if(isset($_GET['time'])&&($_GET['time'] == 720)) echo 'selected="selected"'?>>30 days</option>
 				<option value="e"  <?php if(isset($_GET['time'])&&($_GET['time'] == 'e')) echo 'selected="selected"'?>>all</option>
 			</select>
+		<input type="submit" value="Refresh">
 		</form>
-	<input type="submit" value="Refresh">
 	<?php
 	uasort($receivedstations, 'cmp'); //sort array by heard time
 	$linesinlog = count(file($logpath))-19; // subtract info lines
