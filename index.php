@@ -229,7 +229,7 @@ session_start(); //start session
 					<th bgcolor="#ffd700"><b><font color="blue">Distance [Km]</font></b></th>
 					<th bgcolor="#ffd700"><b><font color="blue">Bearing [deg]</font></b></th>
 				</tr>
-				<?php while(list($call,$details) = each($receivedstations)) {
+				<?php foreach($receivedstations as $call=>$details) {
 					$remoteloc = (strlen($details[3])==4 ? $details[3]."LL" : $details[3]); //consider locator subsqaure center because WSPRd manages only 4digit locator
 					$bd = bearing_dist($configloc, $remoteloc); 
 				?>
