@@ -1,8 +1,10 @@
 # WSPRd_web_interface
 A simple web interface for WSPRd daemon statistics
 
-# NOTE1: this code works only with the following wsprd daemon version modified by me! : https://github.com/IZ7BOJ/rtlsdr-wsprd/
-The original wsprd version doesn't show date and time of received spots, that will be used for statistics. The daemon works whith rtlsdr dongles with direct sampling mode
+This code works  with the following wsprd daemon : https://github.com/Guenael/rtlsdr-wsprd
+The daemon works whith rtlsdr dongles with direct sampling mode
+
+NOTE1: as already noted in the installing instructions of rtl-wsprd, install rtl-sdr library by OSMOCOM. On RPi, don't use "apt-get" to install rtl-sdr library, because the it's not compatible!
 
 NOTE2: the wsprd daemon shall be launched with a command similar to this:
 sudo stdbuf -o L -e L <path_to_rtlsdr_wsprd>/rtlsdr_wsprd -c <your_call> -l <your_6_digits_locator> -d 2 -S -g <your_preferred_gain> -f <band_or_frequency> <path_and_log_filename> 2>&1 &
